@@ -174,7 +174,7 @@ button {
 }
 
 canvas {
-  width: min(100%, 1120px, calc((100dvh - 150px) * 16 / 9));
+  width: min(100%, 1120px, calc((100dvh - 190px) * 16 / 9));
   height: auto;
   max-width: 1120px;
   display: block;
@@ -186,10 +186,15 @@ canvas {
 
 .touch-controls {
   display: grid;
-  grid-template-columns: 64px 64px minmax(24px, 1fr) minmax(78px, 96px);
+  grid-template-columns:
+    minmax(78px, 94px) minmax(78px, 94px) minmax(28px, 1fr)
+    minmax(112px, 136px);
   justify-content: stretch;
-  gap: 10px;
-  min-height: 64px;
+  align-items: center;
+  gap: 14px;
+  min-height: 94px;
+  padding: 6px max(8px, env(safe-area-inset-right)) 6px
+    max(8px, env(safe-area-inset-left));
 }
 
 .touch-controls .jump {
@@ -197,7 +202,8 @@ canvas {
 }
 
 .pad-button {
-  height: 58px;
+  min-width: 78px;
+  height: 78px;
   display: grid;
   place-items: center;
   border-radius: 8px;
@@ -218,11 +224,11 @@ canvas {
 }
 
 .arrow {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   display: block;
-  border-top: 4px solid currentColor;
-  border-left: 4px solid currentColor;
+  border-top: 5px solid currentColor;
+  border-left: 5px solid currentColor;
 }
 
 .arrow.left {
@@ -265,6 +271,18 @@ canvas {
   }
 
   canvas {
-    width: min(100%, calc((100dvh - 170px) * 16 / 9));
+    width: min(100%, calc((100dvh - 210px) * 16 / 9));
+  }
+
+  .touch-controls {
+    grid-template-columns: 72px 72px minmax(18px, 1fr) minmax(96px, 116px);
+    gap: 10px;
+    min-height: 84px;
+    padding-inline: 4px;
+  }
+
+  .pad-button {
+    min-width: 72px;
+    height: 72px;
   }
 }
