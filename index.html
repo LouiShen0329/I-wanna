@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>I Wanna: 反向安全屋</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar" aria-label="游戏状态">
+        <div class="brand">
+          <span class="brand-mark"></span>
+          <span>I Wanna: 反向安全屋</span>
+        </div>
+        <div id="status" class="status">死亡 0 | 存档 1/4 | 钥匙未拿</div>
+        <button id="muteButton" class="icon-button" type="button" aria-label="切换声音">
+          <span class="sound-on"></span>
+        </button>
+      </header>
+
+      <section class="stage" aria-label="游戏舞台">
+        <canvas id="game" width="960" height="540" aria-label="坑爹平台跳跃游戏画面"></canvas>
+      </section>
+
+      <nav class="touch-controls" aria-label="触控操作">
+        <button type="button" class="pad-button" data-code="ArrowLeft" aria-label="向左">
+          <span class="arrow left"></span>
+        </button>
+        <button type="button" class="pad-button" data-code="ArrowRight" aria-label="向右">
+          <span class="arrow right"></span>
+        </button>
+        <button type="button" class="pad-button jump" data-code="Space" aria-label="跳跃">
+          <span class="arrow up"></span>
+        </button>
+      </nav>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
